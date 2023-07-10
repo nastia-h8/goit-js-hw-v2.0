@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Practice</title>
+    <link rel="stylesheet" href="css/common.css" />
+    <link
+      href="
+https://cdn.jsdelivr.net/npm/basiclightbox@5.0.4/dist/basicLightbox.min.css
+"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <p><a href="index.html">Go back</a></p>
+    <!-- мутований масив -->
+
+    <!-------------------------------------------------------------------->
+
+    <!-- throttle, debounce -->
+    <p class="cta">Scroll me</p>
+
+    <div class="event-counter">
+      <div class="box">
+        <p>No timing function</p>
+        <span class="output vanilla">0</span>
+      </div>
+
+      <div class="box">
+        <p>Throttled</p>
+        <span class="output throttled">0</span>
+      </div>
+
+      <div class="box">
+        <p>Trailing debounce</p>
+        <span class="output trailing">0</span>
+      </div>
+
+      <div class="box">
+        <p>Leading debounce</p>
+        <span class="output leading">0</span>
+      </div>
+    </div>
+    <!-------------------------------------------------------------------->
+
+    <!--lightbox+cars -->
+    <ul class="js-cars-list cars-list"></ul>
+    <!-------------------------------------------------------------------->
+    <!--event propagation/XO Game -->
+    <div class="xo-container">
+      <h2 class="js-xo-output xo-title"></h2>
+      <div class="xo-content js-xo-content"></div>
+    </div>
+    <!-------------------------------------------------------------------->
+    <!--event propagation/color palette -->
+    <div class="js-palette palette"></div>
+    <!-------------------------------------------------------------------->
+    <!--event propagation/tags -->
+    <ul class="tags js-tags">
+      <li class="tags__item">
+        <button class="tags__btn" data-value="html">#html</button>
+      </li>
+      <li class="tags__item">
+        <button class="tags__btn" data-value="css">#css</button>
+      </li>
+      <li class="tags__item">
+        <button class="tags__btn" data-value="js">#js</button>
+      </li>
+      <li class="tags__item">
+        <button class="tags__btn" data-value="react">#react</button>
+      </li>
+      <li class="tags__item">
+        <button class="tags__btn" data-value="redux">#redux</button>
+      </li>
+      <li class="tags__item">
+        <button class="tags__btn" data-value="nodejs">#nodejs</button>
+      </li>
+      <li class="tags__item">
+        <button class="tags__btn" data-value="webpack">#webpack</button>
+      </li>
+      <li class="tags__item">
+        <button class="tags__btn" data-value="npm">#npm</button>
+      </li>
+    </ul>
+    <!-------------------------------------------------------------------->
+
+    <!--event propagation/color palette -->
+    <p class="color-palette-output">Selected color: -</p>
+    <div class="color-palette"></div>
+    <!-------------------------------------------------------------------->
+
+    <!--bubbling -->
+    <div id="parent">
+      Parent
+      <div id="child">
+        Child
+        <div id="descendant">Descendant</div>
+      </div>
+    </div>
+    <!-------------------------------------------------------------------->
+
+    <!-- colorPicker// for, map, function, append -->
+    <div class="color-picker js-color-picker"></div>
+    <!-------------------------------------------------------------------->
+
+    <!-- products// map, append-->
+    <div class="js-products"></div>
+    <!-------------------------------------------------------------------->
+
+    <!-- Парс рядків -->
+    <h1 class="title"><span>This is title</span></h1>
+    <table class="transaction-table js-transaction-table">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Sum</th>
+          <th>Date</th>
+          <th>Owner</th>
+          <th>Type</th>
+          <th>Name</th>
+          <th>Number</th>
+        </tr>
+      </thead>
+    </table>
+    <!-------------------------------------------------------------------->
+
+    <!-- Cars-->
+    <ul class="js-cars-container"></ul>
+    <!-------------------------------------------------------------------->
+
+    <!-- події -->
+    <button id="multiple" class="btn">MULTIPLE CALLBACKS</button>
+
+    <button class="btn" data-action="add">Add Listener</button>
+    <button class="btn" data-action="remove">Remove Listener</button>
+    <hr />
+    <button id="btn" class="btn">Click me</button>
+
+    <!-- <form class="register-form" autocomplete="off">
+      <input type="text" name="username" placeholder="Username" />
+      <input type="password" name="password" placeholder="Password" />
+      <button type="submit">Register</button>
+    </form> -->
+
+    <button type="button" data-action="clear">Clear output</button>
+    <div class="log-list"></div>
+    <!-------------------------------------------------------------------->
+
+    <!-- події форми-->
+    <form class="form" autocomplete="off">
+      <input type="text" name="login" placeholder="Login" />
+      <input type="password" name="password" placeholder="Password" />
+      <button class="btn" type="submit">Register</button>
+    </form>
+
+    <p>Selected option text: <span class="text-output">none</span></p>
+
+    <p></p>
+    <p>Selected option value: <span class="value-output">none</span></p>
+
+    <select class="pizza-select">
+      <option value="four_meats">Four Meats</option>
+      <option value="royal_cheese">Royal Cheese</option>
+      <option value="vegetarian">Vegetarian</option>
+      <option value="smoked_salmon">Smoked Salmon</option>
+    </select>
+
+    <button type="button" data-action="set">Set focus to input</button>
+    <button type="button" data-action="remove">Remove focus from input</button>
+    <br /><br />
+    <input type="text" class="text-input" />
+    <!-------------------------------------------------------------------->
+    <!-- події модалки-->
+    <h2>--------------modal open/close------------------</h2>
+    <button type="button" data-action="open-modal">Open</button>
+    <div class="backdrop js-backdrop">
+      <div class="modal">
+        <h2>Modal window</h2>
+        <p>
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Illo cumque
+          voluptate ducimus sunt porro corporis dolorum animi, nulla assumenda
+          unde reprehenderit, pariatur ab eveniet, rerum repudiandae quam
+          inventore provident impedit!
+        </p>
+        <button type="button" data-action="close-modal">Close</button>
+      </div>
+    </div>
+    <br />
+    <!-------------------------------------------------------------------->
+    <!-- події-->
+    <br />
+    <button type="button" class="btn-move">Click</button>
+    <div class="js-move-container move-container"></div>
+    <br />
+    <ol>
+      <li>
+        <h2 class="js-title-to-hide">
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Neque, eum.
+        </h2>
+      </li>
+      <li>
+        <h2 class="js-title-to-hide1">
+          Lorem ipsum dolor sit amet consectetur
+        </h2>
+      </li>
+      <li><h2 class="js-title-to-hide2">Lorem ipsum</h2></li>
+    </ol>
+    <!-------------------------------------------------------------------->
+
+    <!-- події/ пошук за ключовим словом у інпуті-->
+    <div>
+      <h2>Favourites</h2>
+      <ul class="js-favourite-list"></ul>
+    </div>
+    <form action="submit" class="js-search-form">
+      <input type="text" name="query" />
+      <select name="select">
+        <option value="name">Марка</option>
+        <option value="model">Модель</option>
+      </select>
+      <button>Search</button>
+    </form>
+    <ul class="js-cars-list"></ul>
+    ----------------------------------------------------------------
+    <!-- <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.3.2/lazysizes.min.js"
+      integrity="sha512-q583ppKrCRc7N5O0n2nzUiJ+suUv7Et1JGels4bXOaMFQcamPk9HjdUknZuuFjBNs7tsMuadge5k9RzdmO+1GQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script> -->
+    <script src="
+    https://cdn.jsdelivr.net/npm/basiclightbox@5.0.4/dist/basicLightbox.min.js
+    "></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.21/lodash.min.js"
+      integrity="sha512-WFN04846sdKMIP5LKNphMaWzU7YpMyCU245etK3g/2ARYbPK9Ub18eG+ljU96qKRCWh+quCY7yefSmlkQw1ANQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="./js/practice.js" type="module"></script>
+  </body>
+</html>

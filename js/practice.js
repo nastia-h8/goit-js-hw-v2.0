@@ -1,3 +1,24 @@
+//--------------------------------------- задача на чергу покупців ---------------------------------------//
+// function fn(buyers, cashNumber) {
+//     const data = {};
+
+//     for (let i = 1; i <= cashNumber; i += 1){
+//         data[i] = 0;
+//     }
+
+//     buyers.forEach(buyer => {
+//         const cashValues = Object.values(data);
+//         const minCashValue = Math.min(...cashValues);
+//         const currentCash = cashValues.indexOf(minCashValue) + 1;
+        
+//         data[currentCash] += buyer;
+//     });
+
+//     console.log(data);
+
+// }
+
+// console.log(fn([12, 3, 5, 6, 2, 15, 7], 2));
 //--------------------------------------- задача на унікальні букви ---------------------------------------//
 // function findUniq(arr) {
 //   for (let i = 0; i < arr.length; i += 1){

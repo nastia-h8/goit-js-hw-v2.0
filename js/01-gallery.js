@@ -50,16 +50,27 @@ function showImgModal(img) {
 
     const imgModal = basicLightbox.create(`<img src="${path}" alt="${description}">`,
         {
-        onShow: () => document.addEventListener('keydown', onEscKeyPress),
-        onClose: () => document.removeEventListener('keydown', onEscKeyPress),
+        handler:null, 
+            onShow(instance){
+                // console.log(instance);
+                this.handler = onEscKeyPress.bind(instance);
+                // console.log(this);
+                document.addEventListener('keydown', this.handler)
+            },
+            onClose() {
+                document.removeEventListener('keydown', this.handler)
+            },
         });
 
     imgModal.show();
 
+
+}
+
     function onEscKeyPress(e) {
+        // console.log(this);
         if (e.code === 'Escape') {
-        imgModal.close();
+        this.close();
         }
     }
-}
 

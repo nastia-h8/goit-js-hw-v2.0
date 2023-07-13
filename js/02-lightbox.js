@@ -1,12 +1,11 @@
 import { galleryItems } from './gallery-items.js';
 // Change code below this line
 
-console.log(galleryItems);
-
 const gallery = document.querySelector('.gallery');
-
 gallery.innerHTML = createGalleryMarkup(galleryItems);
-gallery.addEventListener('click', onImgClick);
+
+const activeImgModal = new SimpleLightbox('.gallery a', { captionsData: 'alt', captionDelay: 250 });
+
 
 /**
  * створює початкову розмітку галереї
@@ -27,20 +26,4 @@ function createGalleryMarkup(arr) {
     </li>
     `
 ).join('');
-}
-
-
-function onImgClick(e) {
-    e.preventDefault();
-    const activeImg = e.target;
-
-    if (!activeImg.classList.contains('gallery__image')) {
-        return;
-    }
-    showModal();
-}
-
-function showModal() {
-    const activeImgModal = new SimpleLightbox('.gallery a', { captionsData: 'alt', captionDelay: 250 });
-    activeImgModal.open()
 }

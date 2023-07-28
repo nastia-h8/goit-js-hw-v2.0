@@ -431,3 +431,8 @@ background-color:#9c9c9c;
   transform: translateX(0);
   opacity: 1;
 } */
+
+
+.show{
+  display: none;
+}
